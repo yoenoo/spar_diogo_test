@@ -77,10 +77,11 @@ pprint(ds.samples[0].__dict__)
 base_model = "HuggingFaceH4/zephyr-7b-beta"
 unlearned_model = "cais/Zephyr_RMU"
 
-# provider = "hf" 
-provider = "vllm"
+provider = "hf" 
+# provider = "vllm"
 
-model = f"{provider}/unlearned_model"
+model = f"{provider}/{unlearned_model}"
+print(f"Using model {model}")
 
 log = eval(wmdp_bio(), model=model)
 print(log)
