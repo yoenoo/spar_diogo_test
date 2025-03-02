@@ -7,6 +7,11 @@ from inspect_ai.scorer import choice
 from inspect_ai.solver import multiple_choice, system_message
 from inspect_ai.model import ChatMessageAssistant, ChatMessageSystem, ChatMessageUser
 
+import argparse 
+parser = argparse.ArgumentParser()
+parser.add_argument("-t"," --task", type=str, required=True, choices=["wmdp-bio", "wmdp-chem", "wmdp-cyber"])
+FLAGS = parser.parse_args()
+
 """
 wmdp-bio record example:
 {'answer': 0,
@@ -63,6 +68,15 @@ if __name__ == "__main__":
     model = f"{provider}/{m}"
     print(f"Using model {model}")
 
-    log = eval(wmdp_bio(), model=model)
+    if FLAGS.task == "wmdp-bio":
+      _task = wmdp_bio()
+    elif FLAGS.task == "wmdp-chem":
+      _task = wmdp_chem()
+    elif FLAGS.task == "wmdp-cyber":
+      _task = wmdp_cyber()
+    else:
+      raise ValueError(f"invalid task flag: {FLAGS.task}")
+
+    log = eval(_task, model=model, limit=64)
     # log = eval(wmdp_bio(), model=model, limit=10, model_args={"tensor_parallel_size": 2}) # slow!
     print(log)
