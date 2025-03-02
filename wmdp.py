@@ -21,7 +21,6 @@ wmdp-bio record example:
 def record_to_sample(record: dict[str, Any]) -> Sample:
   input = [ChatMessageUser(content=record["question"])]
   choices = record["choices"]
-  # target = chr(ord("A") + record["answer"])
   target = ("ABCD"[record["answer"]])
   return Sample(input=input, choices=choices, target=target)
 
@@ -60,13 +59,10 @@ if __name__ == "__main__":
 
   provider = "vllm" # or "hf"
   
-  for m in [base_model, unlearned_model]:
+  for m in [unlearned_model, base_model]:
     model = f"{provider}/{m}"
     print(f"Using model {model}")
 
-    log = eval(wmdp_bio(), model=model, limit=10)
+    log = eval(wmdp_bio(), model=model)
     # log = eval(wmdp_bio(), model=model, limit=10, model_args={"tensor_parallel_size": 2}) # slow!
     print(log)
-
-    # multi-GPU doesn't seem to work
-    # log = eval(wmdp_bio(), model=model, limit=10, model_args=dict(device="0,1"))
