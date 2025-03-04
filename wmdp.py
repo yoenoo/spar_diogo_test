@@ -7,11 +7,11 @@ from inspect_ai.scorer import choice, exact, match
 from inspect_ai.solver import multiple_choice, system_message, chain
 from inspect_ai.model import ChatMessageAssistant, ChatMessageSystem, ChatMessageUser
 
-import argparse 
-parser = argparse.ArgumentParser()
-parser.add_argument("-m", "--mode", type=str, required=True, choices=["base", "unlearned"])
-parser.add_argument("-t", "--task", type=str, required=True, choices=["wmdp-bio", "wmdp-chem", "wmdp-cyber"])
-FLAGS = parser.parse_args()
+# import argparse 
+# parser = argparse.ArgumentParser()
+# parser.add_argument("-m", "--mode", type=str, required=True, choices=["base", "unlearned"])
+# parser.add_argument("-t", "--task", type=str, required=True, choices=["wmdp-bio", "wmdp-chem", "wmdp-cyber"])
+# FLAGS = parser.parse_args()
 
 """
 wmdp-bio record example:
@@ -36,6 +36,7 @@ def load_wmdp_dataset(name: str) -> Dataset:
     name=name,
     sample_fields=record_to_sample,
     split="test",
+    metadata="The following are multiple choice questions (with answers) about biology.\n\n",
   )
 
 my_solver = chain(
@@ -65,6 +66,12 @@ def wmdp_chem() -> Task:
 def wmdp_cyber() -> Task:
   return create_task("wmdp-cyber")
 
+
+
+# eval(wmdp_bio(), model="openai/gpt-4o-mini", limit=3)
+
+
+"""
 if __name__ == "__main__":
   # base_model = "HuggingFaceH4/zephyr-7b-beta"
   base_model = "HuggingFaceH4/Zephyr-7b-alpha"
@@ -85,3 +92,4 @@ if __name__ == "__main__":
   log = eval(_task, model=model, limit=256)
   # log = eval(wmdp_bio(), model=model, limit=10, model_args={"tensor_parallel_size": 2}) # slow!
   print(log)
+"""
