@@ -20,3 +20,6 @@ To look at the eval logs:
 ```bash
 inspect view --log-dir "./log"
 ```
+
+
+pull from the remote branch: https://github.com/diogo-cruz/eval_for_unlearning
