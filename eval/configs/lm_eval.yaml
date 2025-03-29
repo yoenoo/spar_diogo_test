@@ -1,0 +1,16 @@
+tasks:
+  tinyMMLU:
+    key_metric_path: ["results", "tinyMMLU", "acc_norm,none"]
+    description: "Tiny version of MMLU benchmark (a good sanity check)"
+  
+  wmdp_bio:
+    key_metric_path: ["results", "wmdp_bio", "acc,none"]
+    description: "Biomedical split of WMDP benchmark" 
+  
+  wmdp_cyber:
+    key_metric_path: ["results", "wmdp_cyber", "acc,none"]
+    description: "Cybersecurity split of WMDP benchmark" 
+
+  wmdp_chem:
+    key_metric_path: ["results", "wmdp_chem", "acc,none"]
+    description: "Chemistry split of WMDP benchmark" 

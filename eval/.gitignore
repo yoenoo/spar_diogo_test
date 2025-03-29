@@ -1,0 +1,9 @@
+# cache
+__pycache__/
+
+# vscode
+.vscode/
+
+# eval results
+tinyBenchmarks.pkl
+*.pkl

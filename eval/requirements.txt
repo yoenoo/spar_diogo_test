@@ -1,0 +1,4 @@
+torch
+transformers
+pyyaml 
+git+https://github.com/felipemaiapolo/tinyBenchmarks # tinyMMLU

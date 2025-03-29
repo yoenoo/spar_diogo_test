@@ -1,0 +1,20 @@
+zephyr_7b_beta:
+  name: "HuggingFaceH4/zephyr-7b-beta"
+  device_map: "auto"
+  precision: "bfloat16" 
+
+zephyr_7b_rmu:
+  name: "cais/Zephyr_RMU"
+  device_map: "auto"
+  precision: "bfloat16" 
+
+llama2_7b:
+  name: "meta-llama/Llama-2-7b-chat-hf"
+  device_map: "auto"
+  precision: "bfloat16" 
+
+llama3_tar_bio:
+  name: "lapisrocks/Llama-3-8B-Instruct-TAR-Bio-v2"
+  tokenizer: "meta-llama/Llama-3.1-8B-Instruct"
+  device_map: "auto"
+  precision: "bfloat16" 
