@@ -1,5 +1,11 @@
 set -e 
 
+git clone --depth 1 https://github.com/EleutherAI/lm-evaluation-harness
+cd lm-evaluation-harness
+uv pip install -e .
+
+cd ..
+
 # below creates a log file
 # lm_eval \
 #   --model hf \
