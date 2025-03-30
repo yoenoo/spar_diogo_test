@@ -1,0 +1,5 @@
+"task": "wmdp_bio_rephrased_latin_filler"
+"dataset_name": "default"
+"dataset_path": "/root/spar_diogo_test/wmdp_rephrased/data_latin_filler_text"
+"include": "_default_template_yaml"
+"description": "The following are multiple choice questions (with answers) about biology.\n\n"

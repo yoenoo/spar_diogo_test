@@ -34,9 +34,12 @@ def evaluate_lm_eval(model, tokenizer, tasks, task_config, batch_size=4, num_few
             save_dir = Path(output_dir) / model_name 
             save_dir.mkdir(parents=True, exist_ok=True)
             with open(save_dir / f"samples_{task}_{today}.jsonl", "w") as f:
-                for entry in task_results["samples"][task]:
+                for i, entry in enumerate(task_results["samples"][task]):
                     record = json.dumps(entry)
                     f.write(record + '\n')
+
+                    if i > 10:
+                        break
 
     # TODO
     # with open(Path(output_dir) / model_name / f"results_{today}.json", "w") as f:
