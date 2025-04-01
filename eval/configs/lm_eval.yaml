@@ -14,3 +14,75 @@ tasks:
   wmdp_chem:
     key_metric_path: ["results", "wmdp_chem", "acc,none"]
     description: "Chemistry split of WMDP benchmark" 
+  
+  wmdp_bio_rephrased_english_filler:
+    key_metric_path: ["results", "wmdp_bio_rephrased_english_filler", "acc,none"]
+    description: "Biology split of WMDP benchmark with english filler" 
+
+  wmdp_bio_rephrased_hindi_filler:
+    key_metric_path: ["results", "wmdp_bio_rephrased_hindi_filler", "acc,none"]
+    description: "Biology split of WMDP benchmark with hindi filler" 
+  
+  wmdp_bio_rephrased_latin_filler:
+    key_metric_path: ["results", "wmdp_bio_rephrased_latin_filler", "acc,none"]
+    description: "Biology split of WMDP benchmark with latin filler" 
+
+  wmdp_bio_rephrased_conversation:
+    key_metric_path: ["results", "wmdp_bio_rephrased_conversation", "acc,none"]
+    description: "Biology split of WMDP benchmark with rephrasing as conversation" 
+
+  wmdp_bio_rephrased_poem:
+    key_metric_path: ["results", "wmdp_bio_rephrased_poem", "acc,none"]
+    description: "Biology split of WMDP benchmark with rephrasing as poem" 
+
+  wmdp_bio_rephrased_replace_with_variables:
+    key_metric_path: ["results", "wmdp_bio_rephrased_replace_with_variables", "acc,none"]
+    description: "Biology split of WMDP benchmark with rephrasing as replace with variables" 
+
+  wmdp_bio_rephrased_technical_terms_removed_1:
+    key_metric_path: ["results", "wmdp_bio_rephrased_technical_terms_removed_1", "acc,none"]
+    description: "Biology split of WMDP benchmark with rephrasing as technical terms removed" 
+
+  wmdp_bio_rephrased_translated_arabic:
+    key_metric_path: ["results", "wmdp_bio_rephrased_translated_arabic", "acc,none"]
+    description: "Biology split of WMDP benchmark with rephrasing as translated arabic" 
+
+  wmdp_bio_rephrased_translated_bengali:
+    key_metric_path: ["results", "wmdp_bio_rephrased_translated_bengali", "acc,none"]
+    description: "Biology split of WMDP benchmark with rephrasing as translated bengali" 
+
+  wmdp_bio_rephrased_translated_czech:
+    key_metric_path: ["results", "wmdp_bio_rephrased_translated_czech", "acc,none"]
+    description: "Biology split of WMDP benchmark with rephrasing as translated czech" 
+
+  wmdp_bio_rephrased_translated_farsi:
+    key_metric_path: ["results", "wmdp_bio_rephrased_translated_farsi", "acc,none"]
+    description: "Biology split of WMDP benchmark with rephrasing as translated farsi" 
+
+  wmdp_bio_rephrased_translated_french:
+    key_metric_path: ["results", "wmdp_bio_rephrased_translated_french", "acc,none"]
+    description: "Biology split of WMDP benchmark with rephrasing as translated french" 
+
+  wmdp_bio_rephrased_translated_german:
+    key_metric_path: ["results", "wmdp_bio_rephrased_translated_german", "acc,none"]
+    description: "Biology split of WMDP benchmark with rephrasing as translated german" 
+
+  wmdp_bio_rephrased_translated_hindi:
+    key_metric_path: ["results", "wmdp_bio_rephrased_translated_hindi", "acc,none"]
+    description: "Biology split of WMDP benchmark with rephrasing as translated hindi" 
+
+  wmdp_bio_rephrased_translated_korean:
+    key_metric_path: ["results", "wmdp_bio_rephrased_translated_korean", "acc,none"]
+    description: "Biology split of WMDP benchmark with rephrasing as translated korean" 
+
+  wmdp_bio_rephrased_translated_telugu:
+    key_metric_path: ["results", "wmdp_bio_rephrased_translated_telugu", "acc,none"]
+    description: "Biology split of WMDP benchmark with rephrasing as translated telugu" 
+
+  wmdp_bio_rephrased_translated_turkish:
+    key_metric_path: ["results", "wmdp_bio_rephrased_translated_turkish", "acc,none"]
+    description: "Biology split of WMDP benchmark with rephrasing as translated turkish" 
+
+  wmdp_bio_rephrased_translated_vietnamese:
+    key_metric_path: ["results", "wmdp_bio_rephrased_translated_vietnamese", "acc,none"]
+    description: "Biology split of WMDP benchmark with rephrasing as translated vietnamese" 

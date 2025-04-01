@@ -1,0 +1,12 @@
+group: wmdp
+task:
+  - wmdp_bio
+  - wmdp_chem
+  - wmdp_cyber
+  - wmdp_bio_rephrased_english_filler
+aggregate_metric_list:
+  - metric: acc
+    aggregation: mean
+    weight_by_size: True
+metadata:
+  version: 1
